@@ -29,10 +29,11 @@ function run(n, x, y) {
             writeToFile()
                 .then(() => {
                     makeCommit()
-                        .then(() => {run(n-1,random.int(0, 53), random.int(0, 6))});
+                        .then(() => {
+                            run(n-1,random.int(0, 53), random.int(0, 6))});
                 });
         }
     })
 }
 
-run(3, random.int(0, 53), random.int(0, 6));
+run(20, random.int(0, 53), random.int(0, 6));
