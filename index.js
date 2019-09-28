@@ -15,7 +15,7 @@ function writeToFile() {
 
 function makeCommit() {
     return new Promise((resolve, reject) => {
-        git().add('data.txt').commit('Another Commit!!', { '--date': date });
+        git().add('data.txt').commit('Another Commit!!', { '--date': date }).push();
         resolve(1);  
     });
 }
@@ -35,5 +35,4 @@ function run(n, x, y) {
     })
 }
 
-run(3, random.int(0, 53), random.int(0, 6))
-    .then(() => {git().push()});
+run(3, random.int(0, 53), random.int(0, 6));
