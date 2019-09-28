@@ -35,5 +35,5 @@ function run(n, x, y) {
     })
 }
 
-run(80, random.int(0, 53), random.int(0, 6))
+run(15, random.int(0, 53), random.int(0, 6))
     .then(() => {git().push()});
